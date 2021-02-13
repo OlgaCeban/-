@@ -1,4 +1,4 @@
- -module(fib).
+-module(fib).
 
 -export([fib_p/1, fib_g/1, tail_fib/1]).
 
