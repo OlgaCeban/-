@@ -11,5 +11,5 @@ fib_g(N) when N == 1 -> 1;
 fib_g(N) when N > 1  -> fib_g(N-1) + fib_g(N-2).
 
 tail_fib(N) -> tail_fib(N, 0, 1).
-tail_fib(0, Acc, _Next) -> Acc;
-tail_fib(N, Acc, Next) -> tail_fib(N - 1, Next, Acc + Next).
+tail_fib(0, Curr, Next) -> Curr;
+tail_fib(N, Curr, Next) -> tail_fib(N - 1, Next, Curr + Next).
