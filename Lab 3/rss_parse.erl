@@ -4,6 +4,8 @@
 -export([get_item_time/1, compare_feed_items/2]).
 -export([run/0]). %% testing
 
+-include_lib("xmerl/include/xmerl.hrl").
+
 is_rss2_feed(XML) ->
     RSS_version = xmerl_xpath:string("/rss[@version='2.0']/text()", XML), %% search if RSS=2.0
     length(RSS_version) > 0. %% if RSS=2.0 returns true
