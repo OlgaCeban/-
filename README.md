@@ -5,6 +5,9 @@ Erlang - это функциональный язык программирова
 
 
 Lab 1 - Square Multiples and the Möbius Function 
+
 Lab 2 - Sieve of Eratosthenes, Process-Style
+
 Lab 3 - Parsing RSS Feeds
+
 Lab 4 - RSS Queues 
