@@ -1,0 +1,946 @@
+Проверка загрузки RSS ленты из XML файла в очередь
+
+1. Проверим файл digg-science-rss1.xml
+
+1> c(rss_parse).
+{ok,rss_parse}
+2> c(rss_queue).
+{ok,rss_queue}
+3> processes().
+[<0.0.0>,<0.1.0>,<0.2.0>,<0.3.0>,<0.4.0>,<0.5.0>,<0.6.0>,
+ <0.7.0>,<0.10.0>,<0.42.0>,<0.44.0>,<0.46.0>,<0.47.0>,
+ <0.49.0>,<0.50.0>,<0.51.0>,<0.52.0>,<0.53.0>,<0.54.0>,
+ <0.55.0>,<0.56.0>,<0.57.0>,<0.58.0>,<0.59.0>,<0.60.0>,
+ <0.61.0>,<0.62.0>,<0.64.0>,<0.65.0>|...]
+4> length(processes()).
+38
+5> rss_queue:test1("digg-science-rss1.xml").
+Size of RSS2Feed: 40
+=INFO REPORT==== 17-Mar-2021::02:30:59.921000 ===
+rss_queue <0.96.0>:  New item added to Queue. PID: <0.96.0>
+
+=INFO REPORT==== 17-Mar-2021::02:30:59.921000 ===
+rss_queue <0.96.0>:  New item added to Queue. PID: <0.96.0>
+
+=INFO REPORT==== 17-Mar-2021::02:30:59.921000 ===
+rss_queue <0.96.0>:  New item added to Queue. PID: <0.96.0>
+
+=INFO REPORT==== 17-Mar-2021::02:30:59.921000 ===
+rss_queue <0.96.0>:  New item added to Queue. PID: <0.96.0>
+
+=INFO REPORT==== 17-Mar-2021::02:30:59.921000 ===
+rss_queue <0.96.0>:  New item added to Queue. PID: <0.96.0>
+
+=INFO REPORT==== 17-Mar-2021::02:30:59.921000 ===
+rss_queue <0.96.0>:  New item added to Queue. PID: <0.96.0>
+
+=INFO REPORT==== 17-Mar-2021::02:30:59.921000 ===
+rss_queue <0.96.0>:  New item added to Queue. PID: <0.96.0>
+
+=INFO REPORT==== 17-Mar-2021::02:30:59.921000 ===
+rss_queue <0.96.0>:  New item added to Queue. PID: <0.96.0>
+
+=INFO REPORT==== 17-Mar-2021::02:30:59.921000 ===
+rss_queue <0.96.0>:  New item added to Queue. PID: <0.96.0>
+
+=INFO REPORT==== 17-Mar-2021::02:30:59.936000 ===
+rss_queue <0.96.0>:  New item added to Queue. PID: <0.96.0>
+
+=INFO REPORT==== 17-Mar-2021::02:30:59.936000 ===
+rss_queue <0.96.0>:  New item added to Queue. PID: <0.96.0>
+
+=INFO REPORT==== 17-Mar-2021::02:30:59.936000 ===
+rss_queue <0.96.0>:  New item added to Queue. PID: <0.96.0>
+
+=INFO REPORT==== 17-Mar-2021::02:30:59.952000 ===
+rss_queue <0.96.0>:  New item added to Queue. PID: <0.96.0>
+
+=INFO REPORT==== 17-Mar-2021::02:30:59.952000 ===
+rss_queue <0.96.0>:  New item added to Queue. PID: <0.96.0>
+
+=INFO REPORT==== 17-Mar-2021::02:30:59.952000 ===
+rss_queue <0.96.0>:  New item added to Queue. PID: <0.96.0>
+
+=INFO REPORT==== 17-Mar-2021::02:30:59.952000 ===
+rss_queue <0.96.0>:  New item added to Queue. PID: <0.96.0>
+
+=INFO REPORT==== 17-Mar-2021::02:30:59.968000 ===
+rss_queue <0.96.0>:  New item added to Queue. PID: <0.96.0>
+
+=INFO REPORT==== 17-Mar-2021::02:30:59.974000 ===
+rss_queue <0.96.0>:  New item added to Queue. PID: <0.96.0>
+
+=INFO REPORT==== 17-Mar-2021::02:30:59.974000 ===
+rss_queue <0.96.0>:  New item added to Queue. PID: <0.96.0>
+
+=INFO REPORT==== 17-Mar-2021::02:30:59.990000 ===
+rss_queue <0.96.0>:  New item added to Queue. PID: <0.96.0>
+
+=INFO REPORT==== 17-Mar-2021::02:30:59.990000 ===
+rss_queue <0.96.0>:  New item added to Queue. PID: <0.96.0>
+
+=INFO REPORT==== 17-Mar-2021::02:31:00.021000 ===
+rss_queue <0.96.0>:  New item added to Queue. PID: <0.96.0>
+
+=INFO REPORT==== 17-Mar-2021::02:31:00.037000 ===
+rss_queue <0.96.0>:  New item added to Queue. PID: <0.96.0>
+
+=INFO REPORT==== 17-Mar-2021::02:31:00.052000 ===
+rss_queue <0.96.0>:  New item added to Queue. PID: <0.96.0>
+
+=INFO REPORT==== 17-Mar-2021::02:31:00.075000 ===
+rss_queue <0.96.0>:  New item added to Queue. PID: <0.96.0>
+
+=INFO REPORT==== 17-Mar-2021::02:31:00.090000 ===
+rss_queue <0.96.0>:  New item added to Queue. PID: <0.96.0>
+
+=INFO REPORT==== 17-Mar-2021::02:31:00.106000 ===
+rss_queue <0.96.0>:  New item added to Queue. PID: <0.96.0>
+
+=INFO REPORT==== 17-Mar-2021::02:31:00.137000 ===
+rss_queue <0.96.0>:  New item added to Queue. PID: <0.96.0>
+
+=INFO REPORT==== 17-Mar-2021::02:31:00.153000 ===
+rss_queue <0.96.0>:  New item added to Queue. PID: <0.96.0>
+
+=INFO REPORT==== 17-Mar-2021::02:31:00.175000 ===
+rss_queue <0.96.0>:  New item added to Queue. PID: <0.96.0>
+
+=INFO REPORT==== 17-Mar-2021::02:31:00.206000 ===
+rss_queue <0.96.0>:  New item added to Queue. PID: <0.96.0>
+
+=INFO REPORT==== 17-Mar-2021::02:31:00.222000 ===
+rss_queue <0.96.0>:  New item added to Queue. PID: <0.96.0>
+
+=INFO REPORT==== 17-Mar-2021::02:31:00.253000 ===
+rss_queue <0.96.0>:  New item added to Queue. PID: <0.96.0>
+
+=INFO REPORT==== 17-Mar-2021::02:31:00.291000 ===
+rss_queue <0.96.0>:  New item added to Queue. PID: <0.96.0>
+
+=INFO REPORT==== 17-Mar-2021::02:31:00.322000 ===
+rss_queue <0.96.0>:  New item added to Queue. PID: <0.96.0>
+
+=INFO REPORT==== 17-Mar-2021::02:31:00.353000 ===
+rss_queue <0.96.0>:  New item added to Queue. PID: <0.96.0>
+
+=INFO REPORT==== 17-Mar-2021::02:31:00.391000 ===
+rss_queue <0.96.0>:  New item added to Queue. PID: <0.96.0>
+
+=INFO REPORT==== 17-Mar-2021::02:31:00.422000 ===
+rss_queue <0.96.0>:  New item added to Queue. PID: <0.96.0>
+
+=INFO REPORT==== 17-Mar-2021::02:31:00.469000 ===
+rss_queue <0.96.0>:  New item added to Queue. PID: <0.96.0>
+
+=INFO REPORT==== 17-Mar-2021::02:31:00.491000 ===
+rss_queue <0.96.0>:  New item added to Queue. PID: <0.96.0>
+
+=INFO REPORT==== 17-Mar-2021::02:31:00.538000 ===
+rss_queue <0.96.0>:  Sent rss items to <0.78.0>
+
+Queue size = 40 items from the feed to <0.96.0>
+
+Queue:
+Item #1:
+  Guid: {xmlText,[{guid,16},{item,88},{channel,2},{rss,1}],
+                 1,[],
+                 "http://digg.com/space/Dark_flow_Proof_of_another_universe",
+                 text},
+  Title: {xmlText,[{title,2},{item,88},{channel,2},{rss,1}],
+                  1,[],"Dark flow: Proof of another universe? ",text},
+  Link: {xmlText,[{link,4},{item,88},{channel,2},{rss,1}],
+                 1,[],
+                 "http://feeds.digg.com/~r/digg/container/science/popular/~3/_7wZtEyDn3w/Dark_flow_Proof_of_another_universe",
+                 text},
+  PubDate: {xmlText,[{pubDate,8},{item,88},{channel,2},{rss,1}],
+                    1,[],"Sat, 24 Jan 2009 04:30:03 +0000",text}.
+Item #2:
+  Guid: {xmlText,[{guid,20},{item,86},{channel,2},{rss,1}],
+                 1,[],
+                 "http://digg.com/general_sciences/Wiggling_Beetle_Larvae_Inspire_Innovative_Boat_Power",
+                 text},
+  Title: {xmlText,[{title,2},{item,86},{channel,2},{rss,1}],
+                  1,[],"Wiggling Beetle Larvae Inspire Innovative Boat Power",
+                  text},
+  Link: {xmlText,[{link,4},{item,86},{channel,2},{rss,1}],
+                 1,[],
+                 "http://feeds.digg.com/~r/digg/container/science/popular/~3/Ek3aKaX5hGY/Wiggling_Beetle_Larvae_Inspire_Innovative_Boat_Power",
+                 text},
+  PubDate: {xmlText,[{pubDate,8},{item,86},{channel,2},{rss,1}],
+                    1,[],"Sat, 24 Jan 2009 07:10:02 +0000",text}.
+Item #3:
+  Guid: {xmlText,[{guid,16},{item,84},{channel,2},{rss,1}],
+                 1,[],
+                 "http://digg.com/general_sciences/Warrior_Gene_Predicts_Aggressive_Behavior_After_Provocation",
+                 text},
+  Title: {xmlText,[{title,2},{item,84},{channel,2},{rss,1}],
+                  1,[],
+                  "Warrior Gene Predicts Aggressive Behavior After Provocation",
+                  text},
+  Link: {xmlText,[{link,4},{item,84},{channel,2},{rss,1}],
+                 1,[],
+                 "http://feeds.digg.com/~r/digg/container/science/popular/~3/QDG0FQnmHmY/Warrior_Gene_Predicts_Aggressive_Behavior_After_Provocation",
+                 text},
+  PubDate: {xmlText,[{pubDate,8},{item,84},{channel,2},{rss,1}],
+                    1,[],"Sat, 24 Jan 2009 07:20:02 +0000",text}.
+Item #4:
+  Guid: {xmlText,[{guid,16},{item,82},{channel,2},{rss,1}],
+                 1,[],
+                 "http://digg.com/general_sciences/Teleportation_Milestone_Achieved",
+                 text},
+  Title: {xmlText,[{title,2},{item,82},{channel,2},{rss,1}],
+                  1,[]," Teleportation Milestone Achieved",text},
+  Link: {xmlText,[{link,4},{item,82},{channel,2},{rss,1}],
+                 1,[],
+                 "http://feeds.digg.com/~r/digg/container/science/popular/~3/I-pxDqJEjY8/Teleportation_Milestone_Achieved",
+                 text},
+  PubDate: {xmlText,[{pubDate,8},{item,82},{channel,2},{rss,1}],
+                    1,[],"Sat, 24 Jan 2009 10:00:02 +0000",text}.
+Item #5:
+  Guid: {xmlText,[{guid,20},{item,80},{channel,2},{rss,1}],
+                 1,[],
+                 "http://digg.com/space/Ring_of_Fire_Solar_Eclipse_for_Indian_Ocean_People_Lucky",
+                 text},
+  Title: {xmlText,[{title,2},{item,80},{channel,2},{rss,1}],
+                  1,[],
+                  "Ring of Fire: Solar Eclipse for Indian Ocean People! Lucky!",
+                  text},
+  Link: {xmlText,[{link,4},{item,80},{channel,2},{rss,1}],
+                 1,[],
+                 "http://feeds.digg.com/~r/digg/container/science/popular/~3/Lrn21K4rq84/Ring_of_Fire_Solar_Eclipse_for_Indian_Ocean_People_Lucky",
+                 text},
+  PubDate: {xmlText,[{pubDate,8},{item,80},{channel,2},{rss,1}],
+                    1,[],"Sat, 24 Jan 2009 12:20:01 +0000",text}.
+Item #6:
+  Guid: {xmlText,[{guid,16},{item,78},{channel,2},{rss,1}],
+                 1,[],
+                 "http://digg.com/space/Want_to_Play_with_My_Shiny_New_Toy",
+                 text},
+  Title: {xmlText,[{title,2},{item,78},{channel,2},{rss,1}],
+                  1,[],"Want to Play with My Shiny New Toy?",text},
+  Link: {xmlText,[{link,4},{item,78},{channel,2},{rss,1}],
+                 1,[],
+                 "http://feeds.digg.com/~r/digg/container/science/popular/~3/i9j_JpRZP6A/Want_to_Play_with_My_Shiny_New_Toy",
+                 text},
+  PubDate: {xmlText,[{pubDate,8},{item,78},{channel,2},{rss,1}],
+                    1,[],"Sat, 24 Jan 2009 13:10:01 +0000",text}.
+Item #7:
+  Guid: {xmlText,[{guid,16},{item,76},{channel,2},{rss,1}],
+                 1,[],
+                 "http://digg.com/environment/Small_earthquake_rattles_western_Los_Angeles_01_23_2009_7_42",
+                 text},
+  Title: {xmlText,[{title,2},{item,76},{channel,2},{rss,1}],
+                  1,[],
+                  "Small earthquake rattles western Los Angeles 01/23/2009 7:42",
+                  text},
+  Link: {xmlText,[{link,4},{item,76},{channel,2},{rss,1}],
+                 1,[],
+                 "http://feeds.digg.com/~r/digg/container/science/popular/~3/axmZZiCvlUk/Small_earthquake_rattles_western_Los_Angeles_01_23_2009_7_42",
+                 text},
+  PubDate: {xmlText,[{pubDate,8},{item,76},{channel,2},{rss,1}],
+                    1,[],"Sat, 24 Jan 2009 15:10:12 +0000",text}.
+Item #8:
+  Guid: {xmlText,[{guid,16},{item,74},{channel,2},{rss,1}],
+                 1,[],
+                 "http://digg.com/general_sciences/Do_Taxi_Drivers_Grow_Bigger_Brains_By_Remembering_Routes",
+                 text},
+  Title: {xmlText,[{title,2},{item,74},{channel,2},{rss,1}],
+                  1,[],
+                  "Do Taxi Drivers Grow Bigger Brains By Remembering Routes?",
+                  text},
+  Link: {xmlText,[{link,4},{item,74},{channel,2},{rss,1}],
+                 1,[],
+                 "http://feeds.digg.com/~r/digg/container/science/popular/~3/mnAnRpL15zU/Do_Taxi_Drivers_Grow_Bigger_Brains_By_Remembering_Routes",
+                 text},
+  PubDate: {xmlText,[{pubDate,8},{item,74},{channel,2},{rss,1}],
+                    1,[],"Sat, 24 Jan 2009 17:50:01 +0000",text}.
+Item #9:
+  Guid: {xmlText,[{guid,16},{item,72},{channel,2},{rss,1}],
+                 1,[],
+                 "http://digg.com/general_sciences/Hobbits_Were_Separate_Species_Skull_Suggests",
+                 text},
+  Title: {xmlText,[{title,2},{item,72},{channel,2},{rss,1}],
+                  1,[],"\"Hobbits\" Were Separate Species, Skull Suggests",
+                  text},
+  Link: {xmlText,[{link,4},{item,72},{channel,2},{rss,1}],
+                 1,[],
+                 "http://feeds.digg.com/~r/digg/container/science/popular/~3/aB1vUyb4HaA/Hobbits_Were_Separate_Species_Skull_Suggests",
+                 text},
+  PubDate: {xmlText,[{pubDate,8},{item,72},{channel,2},{rss,1}],
+                    1,[],"Sat, 24 Jan 2009 18:20:02 +0000",text}.
+Item #10:
+  Guid: {xmlText,[{guid,20},{item,70},{channel,2},{rss,1}],
+                 1,[],
+                 "http://digg.com/environment/Colleges_turn_french_fry_oil_into_fuel",
+                 text},
+  Title: {xmlText,[{title,2},{item,70},{channel,2},{rss,1}],
+                  1,[],"Colleges turn french fry oil into fuel ",text},
+  Link: {xmlText,[{link,4},{item,70},{channel,2},{rss,1}],
+                 1,[],
+                 "http://feeds.digg.com/~r/digg/container/science/popular/~3/FG55_9eCkPk/Colleges_turn_french_fry_oil_into_fuel",
+                 text},
+  PubDate: {xmlText,[{pubDate,8},{item,70},{channel,2},{rss,1}],
+                    1,[],"Sat, 24 Jan 2009 18:40:52 +0000",text}.
+Item #11:
+  Guid: {xmlText,[{guid,20},{item,68},{channel,2},{rss,1}],
+                 1,[],
+                 "http://digg.com/space/Europe_s_Sexy_New_Gravity_Satellite",
+                 text},
+  Title: {xmlText,[{title,2},{item,68},{channel,2},{rss,1}],
+                  1,[],"Europe's Sexy New Gravity Satellite",text},
+  Link: {xmlText,[{link,4},{item,68},{channel,2},{rss,1}],
+                 1,[],
+                 "http://feeds.digg.com/~r/digg/container/science/popular/~3/aYW7vQCFLeg/Europe_s_Sexy_New_Gravity_Satellite",
+                 text},
+  PubDate: {xmlText,[{pubDate,8},{item,68},{channel,2},{rss,1}],
+                    1,[],"Sat, 24 Jan 2009 20:10:02 +0000",text}.
+Item #12:
+  Guid: {xmlText,[{guid,20},{item,66},{channel,2},{rss,1}],
+                 1,[],
+                 "http://digg.com/environment/How_Do_You_Predict_An_Avalanche_This_Guy_s_Finding_Out",
+                 text},
+  Title: {xmlText,[{title,2},{item,66},{channel,2},{rss,1}],
+                  1,[],
+                  "How Do You Predict An Avalanche? This Guy's Finding Out",
+                  text},
+  Link: {xmlText,[{link,4},{item,66},{channel,2},{rss,1}],
+                 1,[],
+                 "http://feeds.digg.com/~r/digg/container/science/popular/~3/eikELAtUh88/How_Do_You_Predict_An_Avalanche_This_Guy_s_Finding_Out",
+                 text},
+  PubDate: {xmlText,[{pubDate,8},{item,66},{channel,2},{rss,1}],
+                    1,[],"Sat, 24 Jan 2009 21:00:02 +0000",text}.
+Item #13:
+  Guid: {xmlText,[{guid,16},{item,64},{channel,2},{rss,1}],
+                 1,[],
+                 "http://digg.com/general_sciences/Why_some_people_can_t_put_two_and_two_together_2",
+                 text},
+  Title: {xmlText,[{title,2},{item,64},{channel,2},{rss,1}],
+                  1,[],"Why some people can't put two and two together ",text},
+  Link: {xmlText,[{link,4},{item,64},{channel,2},{rss,1}],
+                 1,[],
+                 "http://feeds.digg.com/~r/digg/container/science/popular/~3/uw0AOsWmU3Q/Why_some_people_can_t_put_two_and_two_together_2",
+                 text},
+  PubDate: {xmlText,[{pubDate,8},{item,64},{channel,2},{rss,1}],
+                    1,[],"Sun, 25 Jan 2009 00:50:02 +0000",text}.
+Item #14:
+  Guid: {xmlText,[{guid,16},{item,62},{channel,2},{rss,1}],
+                 1,[],
+                 "http://digg.com/environment/Weapons_Grade_Plutonium_Made_in_1946_Found_in_Dump",
+                 text},
+  Title: {xmlText,[{title,2},{item,62},{channel,2},{rss,1}],
+                  1,[],"Weapons-Grade Plutonium Made in 1946 Found in Dump ",
+                  text},
+  Link: {xmlText,[{link,4},{item,62},{channel,2},{rss,1}],
+                 1,[],
+                 "http://feeds.digg.com/~r/digg/container/science/popular/~3/Z7BP9zKaDNQ/Weapons_Grade_Plutonium_Made_in_1946_Found_in_Dump",
+                 text},
+  PubDate: {xmlText,[{pubDate,8},{item,62},{channel,2},{rss,1}],
+                    1,[],"Sun, 25 Jan 2009 01:30:02 +0000",text}.
+Item #15:
+  Guid: {xmlText,[{guid,20},{item,60},{channel,2},{rss,1}],
+                 1,[],
+                 "http://digg.com/environment/Public_Concern_Over_Environment_Global_Warming_Drops_Hugely",
+                 text},
+  Title: {xmlText,[{title,2},{item,60},{channel,2},{rss,1}],
+                  1,[],
+                  "Public Concern Over Environment, Global Warming Drops Hugely",
+                  text},
+  Link: {xmlText,[{link,4},{item,60},{channel,2},{rss,1}],
+                 1,[],
+                 "http://feeds.digg.com/~r/digg/container/science/popular/~3/beRDu432iD8/Public_Concern_Over_Environment_Global_Warming_Drops_Hugely",
+                 text},
+  PubDate: {xmlText,[{pubDate,8},{item,60},{channel,2},{rss,1}],
+                    1,[],"Sun, 25 Jan 2009 02:00:03 +0000",text}.
+Item #16:
+  Guid: {xmlText,[{guid,20},{item,58},{channel,2},{rss,1}],
+                 1,[],
+                 "http://digg.com/environment/Waste_To_Energy_System_Could_Mean_Big_Savings",
+                 text},
+  Title: {xmlText,[{title,2},{item,58},{channel,2},{rss,1}],
+                  1,[],"Waste-To-Energy System Could Mean Big Savings",text},
+  Link: {xmlText,[{link,4},{item,58},{channel,2},{rss,1}],
+                 1,[],
+                 "http://feeds.digg.com/~r/digg/container/science/popular/~3/P5cnUgxz6r4/Waste_To_Energy_System_Could_Mean_Big_Savings",
+                 text},
+  PubDate: {xmlText,[{pubDate,8},{item,58},{channel,2},{rss,1}],
+                    1,[],"Sun, 25 Jan 2009 05:20:01 +0000",text}.
+Item #17:
+  Guid: {xmlText,[{guid,20},{item,56},{channel,2},{rss,1}],
+                 1,[],
+                 "http://digg.com/general_sciences/Darwin_s_research_was_motivated_by_desire_to_end_slavery",
+                 text},
+  Title: {xmlText,[{title,2},{item,56},{channel,2},{rss,1}],
+                  1,[],
+                  "Darwin's research was motivated by desire to end slavery",
+                  text},
+  Link: {xmlText,[{link,4},{item,56},{channel,2},{rss,1}],
+                 1,[],
+                 "http://feeds.digg.com/~r/digg/container/science/popular/~3/68ISEPmO0R4/Darwin_s_research_was_motivated_by_desire_to_end_slavery",
+                 text},
+  PubDate: {xmlText,[{pubDate,8},{item,56},{channel,2},{rss,1}],
+                    1,[],"Sun, 25 Jan 2009 07:20:01 +0000",text}.
+Item #18:
+  Guid: {xmlText,[{guid,20},{item,54},{channel,2},{rss,1}],
+                 1,[],
+                 "http://digg.com/environment/Arctic_trek_to_reveal_true_extent_of_melting_ice_caps_PICS",
+                 text},
+  Title: {xmlText,[{title,2},{item,54},{channel,2},{rss,1}],
+                  1,[],
+                  "Arctic trek to reveal true extent of melting ice caps (PICS)",
+                  text},
+  Link: {xmlText,[{link,4},{item,54},{channel,2},{rss,1}],
+                 1,[],
+                 "http://feeds.digg.com/~r/digg/container/science/popular/~3/y6Kdp2qIlLs/Arctic_trek_to_reveal_true_extent_of_melting_ice_caps_PICS",
+                 text},
+  PubDate: {xmlText,[{pubDate,8},{item,54},{channel,2},{rss,1}],
+                    1,[],"Sun, 25 Jan 2009 08:00:02 +0000",text}.
+Item #19:
+  Guid: {xmlText,[{guid,16},{item,52},{channel,2},{rss,1}],
+                 1,[],
+                 "http://digg.com/general_sciences/University_of_Miami_engineer_designs_stretchable_electronics",
+                 text},
+  Title: {xmlText,[{title,2},{item,52},{channel,2},{rss,1}],
+                  1,[],
+                  "University of Miami engineer designs stretchable electronics",
+                  text},
+  Link: {xmlText,[{link,4},{item,52},{channel,2},{rss,1}],
+                 1,[],
+                 "http://feeds.digg.com/~r/digg/container/science/popular/~3/rJ2N4RumEe4/University_of_Miami_engineer_designs_stretchable_electronics",
+                 text},
+  PubDate: {xmlText,[{pubDate,8},{item,52},{channel,2},{rss,1}],
+                    1,[],"Sun, 25 Jan 2009 11:00:03 +0000",text}.
+Item #20:
+  Guid: {xmlText,[{guid,20},{item,50},{channel,2},{rss,1}],
+                 1,[],
+                 "http://digg.com/general_sciences/How_People_Get_into_Americas_Thousand_Years_Ago_and_Why",
+                 text},
+  Title: {xmlText,[{title,2},{item,50},{channel,2},{rss,1}],
+                  1,[],
+                  "How People Get into Americas Thousand Years Ago? and Why??!",
+                  text},
+  Link: {xmlText,[{link,4},{item,50},{channel,2},{rss,1}],
+                 1,[],
+                 "http://feeds.digg.com/~r/digg/container/science/popular/~3/pJLQpRLn4sc/How_People_Get_into_Americas_Thousand_Years_Ago_and_Why",
+                 text},
+  PubDate: {xmlText,[{pubDate,8},{item,50},{channel,2},{rss,1}],
+                    1,[],"Sun, 25 Jan 2009 12:10:02 +0000",text}.
+Item #21:
+  Guid: {xmlText,[{guid,16},{item,48},{channel,2},{rss,1}],
+                 1,[],
+                 "http://digg.com/space/Annular_Eclipse_The_Ring_of_Fire_APOD",
+                 text},
+  Title: {xmlText,[{title,2},{item,48},{channel,2},{rss,1}],
+                  1,[],"Annular Eclipse: The Ring of Fire  (APOD)",text},
+  Link: {xmlText,[{link,4},{item,48},{channel,2},{rss,1}],
+                 1,[],
+                 "http://feeds.digg.com/~r/digg/container/science/popular/~3/D_fl7IFptzg/Annular_Eclipse_The_Ring_of_Fire_APOD",
+                 text},
+  PubDate: {xmlText,[{pubDate,8},{item,48},{channel,2},{rss,1}],
+                    1,[],"Sun, 25 Jan 2009 12:30:03 +0000",text}.
+Item #22:
+  Guid: {xmlText,[{guid,20},{item,46},{channel,2},{rss,1}],
+                 1,[],
+                 "http://digg.com/general_sciences/Women_are_happy_men_still_suffer_from_Small_Penis_syndrome",
+                 text},
+  Title: {xmlText,[{title,2},{item,46},{channel,2},{rss,1}],
+                  1,[],
+                  "Women are happy, men still suffer from \"Small Penis syndrome",
+                  text},
+  Link: {xmlText,[{link,4},{item,46},{channel,2},{rss,1}],
+                 1,[],
+                 "http://feeds.digg.com/~r/digg/container/science/popular/~3/tCn5E308uRU/Women_are_happy_men_still_suffer_from_Small_Penis_syndrome",
+                 text},
+  PubDate: {xmlText,[{pubDate,8},{item,46},{channel,2},{rss,1}],
+                    1,[],"Sun, 25 Jan 2009 16:50:02 +0000",text}.
+Item #23:
+  Guid: {xmlText,[{guid,16},{item,44},{channel,2},{rss,1}],
+                 1,[],
+                 "http://digg.com/space/Study_The_Dark_Side_of_the_Moon_May_Have_Once_Faced_Earth",
+                 text},
+  Title: {xmlText,[{title,2},{item,44},{channel,2},{rss,1}],
+                  1,[],
+                  "Study: The Dark Side of the Moon May Have Once Faced Earth",
+                  text},
+  Link: {xmlText,[{link,4},{item,44},{channel,2},{rss,1}],
+                 1,[],
+                 "http://feeds.digg.com/~r/digg/container/science/popular/~3/AqbZ0RyipcM/Study_The_Dark_Side_of_the_Moon_May_Have_Once_Faced_Earth",
+                 text},
+  PubDate: {xmlText,[{pubDate,8},{item,44},{channel,2},{rss,1}],
+                    1,[],"Sun, 25 Jan 2009 17:10:02 +0000",text}.
+Item #24:
+  Guid: {xmlText,[{guid,16},{item,42},{channel,2},{rss,1}],
+                 1,[],
+                 "http://digg.com/environment/Giant_Toxic_Coal_Ash_Spill_Threatens_Animals",
+                 text},
+  Title: {xmlText,[{title,2},{item,42},{channel,2},{rss,1}],
+                  1,[],"Giant Toxic Coal Ash Spill Threatens Animals",text},
+  Link: {xmlText,[{link,4},{item,42},{channel,2},{rss,1}],
+                 1,[],
+                 "http://feeds.digg.com/~r/digg/container/science/popular/~3/b5oAe4ftPt8/Giant_Toxic_Coal_Ash_Spill_Threatens_Animals",
+                 text},
+  PubDate: {xmlText,[{pubDate,8},{item,42},{channel,2},{rss,1}],
+                    1,[],"Sun, 25 Jan 2009 17:20:02 +0000",text}.
+Item #25:
+  Guid: {xmlText,[{guid,20},{item,40},{channel,2},{rss,1}],
+                 1,[],
+                 "http://digg.com/environment/Volcanoes_Erupting_Through_Thick_Blanket_of_Ice",
+                 text},
+  Title: {xmlText,[{title,2},{item,40},{channel,2},{rss,1}],
+                  1,[],"Volcanoes Erupting Through Thick Blanket of Ice",text},
+  Link: {xmlText,[{link,4},{item,40},{channel,2},{rss,1}],
+                 1,[],
+                 "http://feeds.digg.com/~r/digg/container/science/popular/~3/rkwCx8pgvk0/Volcanoes_Erupting_Through_Thick_Blanket_of_Ice",
+                 text},
+  PubDate: {xmlText,[{pubDate,8},{item,40},{channel,2},{rss,1}],
+                    1,[],"Sun, 25 Jan 2009 19:20:02 +0000",text}.
+Item #26:
+  Guid: {xmlText,[{guid,16},{item,38},{channel,2},{rss,1}],
+                 1,[],
+                 "http://digg.com/general_sciences/Lizards_Evolving_Rapidly_to_Survive_Deadly_Fire_Ants",
+                 text},
+  Title: {xmlText,[{title,2},{item,38},{channel,2},{rss,1}],
+                  1,[],"Lizards Evolving Rapidly to Survive Deadly Fire Ants",
+                  text},
+  Link: {xmlText,[{link,4},{item,38},{channel,2},{rss,1}],
+                 1,[],
+                 "http://feeds.digg.com/~r/digg/container/science/popular/~3/V9zh5rSdJ50/Lizards_Evolving_Rapidly_to_Survive_Deadly_Fire_Ants",
+                 text},
+  PubDate: {xmlText,[{pubDate,8},{item,38},{channel,2},{rss,1}],
+                    1,[],"Sun, 25 Jan 2009 20:10:01 +0000",text}.
+Item #27:
+  Guid: {xmlText,[{guid,16},{item,36},{channel,2},{rss,1}],
+                 1,[],
+                 "http://digg.com/space/NASA_Gets_First_Look_at_Far_Side_of_Sun",
+                 text},
+  Title: {xmlText,[{title,2},{item,36},{channel,2},{rss,1}],
+                  1,[],"NASA Gets First Look at Far Side of Sun",text},
+  Link: {xmlText,[{link,4},{item,36},{channel,2},{rss,1}],
+                 1,[],
+                 "http://feeds.digg.com/~r/digg/container/science/popular/~3/MrHZPGcQabY/NASA_Gets_First_Look_at_Far_Side_of_Sun",
+                 text},
+  PubDate: {xmlText,[{pubDate,8},{item,36},{channel,2},{rss,1}],
+                    1,[],"Sun, 25 Jan 2009 20:20:06 +0000",text}.
+Item #28:
+  Guid: {xmlText,[{guid,20},{item,34},{channel,2},{rss,1}],
+                 1,[],"http://digg.com/general_sciences/Tiny_Teeth",text},
+  Title: {xmlText,[{title,2},{item,34},{channel,2},{rss,1}],
+                  1,[],"Tiny Teeth",text},
+  Link: {xmlText,[{link,4},{item,34},{channel,2},{rss,1}],
+                 1,[],
+                 "http://feeds.digg.com/~r/digg/container/science/popular/~3/bOAoPsn0EmM/Tiny_Teeth",
+                 text},
+  PubDate: {xmlText,[{pubDate,8},{item,34},{channel,2},{rss,1}],
+                    1,[],"Sun, 25 Jan 2009 21:20:02 +0000",text}.
+Item #29:
+  Guid: {xmlText,[{guid,16},{item,32},{channel,2},{rss,1}],
+                 1,[],
+                 "http://digg.com/general_sciences/Single_Brain_Cell_Can_Hold_a_Memory",
+                 text},
+  Title: {xmlText,[{title,2},{item,32},{channel,2},{rss,1}],
+                  1,[],"Single Brain Cell Can Hold a Memory.",text},
+  Link: {xmlText,[{link,4},{item,32},{channel,2},{rss,1}],
+                 1,[],
+                 "http://feeds.digg.com/~r/digg/container/science/popular/~3/UgsqbyAefyo/Single_Brain_Cell_Can_Hold_a_Memory",
+                 text},
+  PubDate: {xmlText,[{pubDate,8},{item,32},{channel,2},{rss,1}],
+                    1,[],"Sun, 25 Jan 2009 23:20:03 +0000",text}.
+Item #30:
+  Guid: {xmlText,[{guid,16},{item,30},{channel,2},{rss,1}],
+                 1,[],
+                 "http://digg.com/general_sciences/Dinosaurs_could_survive_cold_conditions",
+                 text},
+  Title: {xmlText,[{title,2},{item,30},{channel,2},{rss,1}],
+                  1,[],"Dinosaurs could survive cold conditions",text},
+  Link: {xmlText,[{link,4},{item,30},{channel,2},{rss,1}],
+                 1,[],
+                 "http://feeds.digg.com/~r/digg/container/science/popular/~3/It5JcFAYAco/Dinosaurs_could_survive_cold_conditions",
+                 text},
+  PubDate: {xmlText,[{pubDate,8},{item,30},{channel,2},{rss,1}],
+                    1,[],"Mon, 26 Jan 2009 00:20:02 +0000",text}.
+Item #31:
+  Guid: {xmlText,[{guid,16},{item,28},{channel,2},{rss,1}],
+                 1,[],
+                 "http://digg.com/space/17_Astronauts_Who_Paid_The_Ultimate_Price",
+                 text},
+  Title: {xmlText,[{title,2},{item,28},{channel,2},{rss,1}],
+                  1,[],"17 Astronauts Who Paid The Ultimate Price",text},
+  Link: {xmlText,[{link,4},{item,28},{channel,2},{rss,1}],
+                 1,[],
+                 "http://feeds.digg.com/~r/digg/container/science/popular/~3/kWgyApkKV9o/17_Astronauts_Who_Paid_The_Ultimate_Price",
+                 text},
+  PubDate: {xmlText,[{pubDate,8},{item,28},{channel,2},{rss,1}],
+                    1,[],"Mon, 26 Jan 2009 02:20:02 +0000",text}.
+Item #32:
+  Guid: {xmlText,[{guid,20},{item,26},{channel,2},{rss,1}],
+                 1,[],
+                 "http://digg.com/environment/Obama_To_Allow_States_To_Regulate_Auto_Emissions",
+                 text},
+  Title: {xmlText,[{title,2},{item,26},{channel,2},{rss,1}],
+                  1,[],"Obama To Allow States To Regulate Auto Emissions",
+                  text},
+  Link: {xmlText,[{link,4},{item,26},{channel,2},{rss,1}],
+                 1,[],
+                 "http://feeds.digg.com/~r/digg/container/science/popular/~3/Q0SvR30Hgic/Obama_To_Allow_States_To_Regulate_Auto_Emissions",
+                 text},
+  PubDate: {xmlText,[{pubDate,8},{item,26},{channel,2},{rss,1}],
+                    1,[],"Mon, 26 Jan 2009 04:00:02 +0000",text}.
+Item #33:
+  Guid: {xmlText,[{guid,20},{item,24},{channel,2},{rss,1}],
+                 1,[],
+                 "http://digg.com/environment/Smuggler_Caught_With_Heads_of_353_African_Gray_Parrots",
+                 text},
+  Title: {xmlText,[{title,2},{item,24},{channel,2},{rss,1}],
+                  1,[],
+                  "Smuggler Caught With Heads of 353 African Gray Parrots",
+                  text},
+  Link: {xmlText,[{link,4},{item,24},{channel,2},{rss,1}],
+                 1,[],
+                 "http://feeds.digg.com/~r/digg/container/science/popular/~3/Fs3Rona5dFg/Smuggler_Caught_With_Heads_of_353_African_Gray_Parrots",
+                 text},
+  PubDate: {xmlText,[{pubDate,8},{item,24},{channel,2},{rss,1}],
+                    1,[],"Mon, 26 Jan 2009 05:30:03 +0000",text}.
+Item #34:
+  Guid: {xmlText,[{guid,16},{item,22},{channel,2},{rss,1}],
+                 1,[],
+                 "http://digg.com/environment/Row_over_scheme_to_fertilise_oceans",
+                 text},
+  Title: {xmlText,[{title,2},{item,22},{channel,2},{rss,1}],
+                  1,[],"Row over scheme to 'fertilise' oceans  ",text},
+  Link: {xmlText,[{link,4},{item,22},{channel,2},{rss,1}],
+                 1,[],
+                 "http://feeds.digg.com/~r/digg/container/science/popular/~3/khG4CiCE2d8/Row_over_scheme_to_fertilise_oceans",
+                 text},
+  PubDate: {xmlText,[{pubDate,8},{item,22},{channel,2},{rss,1}],
+                    1,[],"Mon, 26 Jan 2009 08:30:02 +0000",text}.
+Item #35:
+  Guid: {xmlText,[{guid,20},{item,20},{channel,2},{rss,1}],
+                 1,[],
+                 "http://digg.com/space/Strange_Asteroid_2009_BD_Stalks_the_Earth",
+                 text},
+  Title: {xmlText,[{title,2},{item,20},{channel,2},{rss,1}],
+                  1,[],"Strange Asteroid 2009 BD Stalks the Earth",text},
+  Link: {xmlText,[{link,4},{item,20},{channel,2},{rss,1}],
+                 1,[],
+                 "http://feeds.digg.com/~r/digg/container/science/popular/~3/8ODK-PfQEKY/Strange_Asteroid_2009_BD_Stalks_the_Earth",
+                 text},
+  PubDate: {xmlText,[{pubDate,8},{item,20},{channel,2},{rss,1}],
+                    1,[],"Mon, 26 Jan 2009 16:30:01 +0000",text}.
+Item #36:
+  Guid: {xmlText,[{guid,20},{item,18},{channel,2},{rss,1}],
+                 1,[],
+                 "http://digg.com/environment/Obama_Takes_Steps_to_Reverse_Bush_Climate_Policies",
+                 text},
+  Title: {xmlText,[{title,2},{item,18},{channel,2},{rss,1}],
+                  1,[],"Obama Takes Steps to Reverse Bush Climate Policies",
+                  text},
+  Link: {xmlText,[{link,4},{item,18},{channel,2},{rss,1}],
+                 1,[],
+                 "http://feeds.digg.com/~r/digg/container/science/popular/~3/llC9cMlDjPU/Obama_Takes_Steps_to_Reverse_Bush_Climate_Policies",
+                 text},
+  PubDate: {xmlText,[{pubDate,8},{item,18},{channel,2},{rss,1}],
+                    1,[],"Mon, 26 Jan 2009 19:50:16 +0000",text}.
+Item #37:
+  Guid: {xmlText,[{guid,16},{item,16},{channel,2},{rss,1}],
+                 1,[],
+                 "http://digg.com/general_sciences/1_800_Year_Old_Figurine_Found_in_Jerusalem",
+                 text},
+  Title: {xmlText,[{title,2},{item,16},{channel,2},{rss,1}],
+                  1,[],"1,800-Year-Old Figurine Found in Jerusalem",text},
+  Link: {xmlText,[{link,4},{item,16},{channel,2},{rss,1}],
+                 1,[],
+                 "http://feeds.digg.com/~r/digg/container/science/popular/~3/TtfYH-Eycmc/1_800_Year_Old_Figurine_Found_in_Jerusalem",
+                 text},
+  PubDate: {xmlText,[{pubDate,8},{item,16},{channel,2},{rss,1}],
+                    1,[],"Mon, 26 Jan 2009 21:00:01 +0000",text}.
+Item #38:
+  Guid: {xmlText,[{guid,20},{item,14},{channel,2},{rss,1}],
+                 1,[],
+                 "http://digg.com/environment/Manhattan_Then_and_Now_PIC",
+                 text},
+  Title: {xmlText,[{title,2},{item,14},{channel,2},{rss,1}],
+                  1,[],"Manhattan: Then and Now [PIC]",text},
+  Link: {xmlText,[{link,4},{item,14},{channel,2},{rss,1}],
+                 1,[],
+                 "http://feeds.digg.com/~r/digg/container/science/popular/~3/ymV4yc_l0Z8/Manhattan_Then_and_Now_PIC",
+                 text},
+  PubDate: {xmlText,[{pubDate,8},{item,14},{channel,2},{rss,1}],
+                    1,[],"Mon, 26 Jan 2009 21:50:02 +0000",text}.
+Item #39:
+  Guid: {xmlText,[{guid,16},{item,12},{channel,2},{rss,1}],
+                 1,[],
+                 "http://digg.com/environment/World_s_highest_drug_levels_entering_India_stream",
+                 text},
+  Title: {xmlText,[{title,2},{item,12},{channel,2},{rss,1}],
+                  1,[],"World's highest drug levels entering India stream",
+                  text},
+  Link: {xmlText,[{link,4},{item,12},{channel,2},{rss,1}],
+                 1,[],
+                 "http://feeds.digg.com/~r/digg/container/science/popular/~3/Nex5m15mqXI/World_s_highest_drug_levels_entering_India_stream",
+                 text},
+  PubDate: {xmlText,[{pubDate,8},{item,12},{channel,2},{rss,1}],
+                    1,[],"Mon, 26 Jan 2009 23:50:01 +0000",text}.
+Item #40:
+  Guid: {xmlText,[{guid,20},{item,10},{channel,2},{rss,1}],
+                 1,[],
+                 "http://digg.com/environment/Renewable_Energy_Accounts_For_Largest_Increase_On_U_S_Grid",
+                 text},
+  Title: {xmlText,[{title,2},{item,10},{channel,2},{rss,1}],
+                  1,[],
+                  "Renewable Energy Accounts For Largest Increase On U.S. Grid.",
+                  text},
+  Link: {xmlText,[{link,4},{item,10},{channel,2},{rss,1}],
+                 1,[],
+                 "http://feeds.digg.com/~r/digg/container/science/popular/~3/Nryq6mJ65c0/Renewable_Energy_Accounts_For_Largest_Increase_On_U_S_Grid",
+                 text},
+  PubDate: {xmlText,[{pubDate,8},{item,10},{channel,2},{rss,1}],
+                    1,[],"Tue, 27 Jan 2009 01:10:02 +0000",text}.
+true
+
+6> processes().
+[<0.0.0>,<0.1.0>,<0.2.0>,<0.3.0>,<0.4.0>,<0.5.0>,<0.6.0>,
+ <0.7.0>,<0.10.0>,<0.42.0>,<0.44.0>,<0.46.0>,<0.47.0>,
+ <0.49.0>,<0.50.0>,<0.51.0>,<0.52.0>,<0.53.0>,<0.54.0>,
+ <0.55.0>,<0.56.0>,<0.57.0>,<0.58.0>,<0.59.0>,<0.60.0>,
+ <0.61.0>,<0.62.0>,<0.64.0>,<0.65.0>|...]
+7> length(processes()).
+38
+
+Вся лента успешно добавлена, утечек процессов не происходит (тест удалил используемый процесс и очистил очередь).
+
+
+Проверка на классификацию элементов
+2. Обработка ленты, в которой есть копия элемента с изменённой датой публикации
+
+8> processes().
+[<0.0.0>,<0.1.0>,<0.2.0>,<0.3.0>,<0.4.0>,<0.5.0>,<0.6.0>,
+ <0.7.0>,<0.10.0>,<0.42.0>,<0.44.0>,<0.46.0>,<0.47.0>,
+ <0.49.0>,<0.50.0>,<0.51.0>,<0.52.0>,<0.53.0>,<0.54.0>,
+ <0.55.0>,<0.56.0>,<0.57.0>,<0.58.0>,<0.59.0>,<0.60.0>,
+ <0.61.0>,<0.62.0>,<0.64.0>,<0.65.0>|...]
+9> length(processes()).
+38
+10> rss_queue:test1("digg-science-rss-updated.xml").
+Size of RSS2Feed: 6
+=INFO REPORT==== 17-Mar-2021::02:35:34.936000 ===
+rss_queue <0.102.0>:  New item added to Queue. PID: <0.102.0>
+
+=INFO REPORT==== 17-Mar-2021::02:35:34.936000 ===
+rss_queue <0.102.0>:  New item added to Queue. PID: <0.102.0>
+
+=INFO REPORT==== 17-Mar-2021::02:35:34.936000 ===
+rss_queue <0.102.0>:  New item added to Queue. PID: <0.102.0>
+
+=INFO REPORT==== 17-Mar-2021::02:35:34.936000 ===
+rss_queue <0.102.0>:  New item added to Queue. PID: <0.102.0>
+
+=INFO REPORT==== 17-Mar-2021::02:35:34.936000 ===
+rss_queue <0.102.0>:  New item added to Queue. PID: <0.102.0>
+
+=INFO REPORT==== 17-Mar-2021::02:35:34.936000 ===
+rss_queue <0.102.0>:  New item added to Queue. PID: <0.102.0>
+
+=INFO REPORT==== 17-Mar-2021::02:35:34.936000 ===
+rss_queue <0.102.0>:  Sent rss items to <0.78.0>
+
+Queue size = 6 items from the feed to <0.102.0>
+
+Queue:
+Item #1:
+  Guid: {xmlText,[{guid,16},{item,20},{channel,2},{rss,1}],
+                 1,[],
+                 "http://digg.com/space/Dark_flow_Proof_of_another_universe",
+                 text},
+  Title: {xmlText,[{title,2},{item,20},{channel,2},{rss,1}],
+                  1,[],"Dark flow: Proof of another universe? ",text},
+  Link: {xmlText,[{link,4},{item,20},{channel,2},{rss,1}],
+                 1,[],
+                 "http://feeds.digg.com/~r/digg/container/science/popular/~3/_7wZtEyDn3w/Dark_flow_Proof_of_another_universe",
+                 text},
+  PubDate: {xmlText,[{pubDate,8},{item,20},{channel,2},{rss,1}],
+                    1,[],"Sat, 24 Jan 2009 04:30:03 +0000",text}.
+Item #2:
+  Guid: {xmlText,[{guid,16},{item,18},{channel,2},{rss,1}],
+                 1,[],
+                 "http://digg.com/environment/Row_over_scheme_to_fertilise_oceans",
+                 text},
+  Title: {xmlText,[{title,2},{item,18},{channel,2},{rss,1}],
+                  1,[],"Row over scheme to 'fertilise' oceans  ",text},
+  Link: {xmlText,[{link,4},{item,18},{channel,2},{rss,1}],
+                 1,[],
+                 "http://feeds.digg.com/~r/digg/container/science/popular/~3/khG4CiCE2d8/Row_over_scheme_to_fertilise_oceans",
+                 text},
+  PubDate: {xmlText,[{pubDate,8},{item,18},{channel,2},{rss,1}],
+                    1,[],"Mon, 26 Jan 2009 08:30:02 +0000",text}.
+Item #3:
+  Guid: {xmlText,[{guid,16},{item,14},{channel,2},{rss,1}],
+                 1,[],
+                 "http://digg.com/general_sciences/1_800_Year_Old_Figurine_Found_in_Jerusalem",
+                 text},
+  Title: {xmlText,[{title,2},{item,14},{channel,2},{rss,1}],
+                  1,[],"1,800-Year-Old Figurine Found in Jerusalem",text},
+  Link: {xmlText,[{link,4},{item,14},{channel,2},{rss,1}],
+                 1,[],
+                 "http://feeds.digg.com/~r/digg/container/science/popular/~3/TtfYH-Eycmc/1_800_Year_Old_Figurine_Found_in_Jerusalem",
+                 text},
+  PubDate: {xmlText,[{pubDate,8},{item,14},{channel,2},{rss,1}],
+                    1,[],"Mon, 26 Jan 2009 21:00:01 +0000",text}.
+Item #4:
+  Guid: {xmlText,[{guid,16},{item,12},{channel,2},{rss,1}],
+                 1,[],
+                 "http://digg.com/environment/World_s_highest_drug_levels_entering_India_stream",
+                 text},
+  Title: {xmlText,[{title,2},{item,12},{channel,2},{rss,1}],
+                  1,[],"World's highest drug levels entering India stream",
+                  text},
+  Link: {xmlText,[{link,4},{item,12},{channel,2},{rss,1}],
+                 1,[],
+                 "http://feeds.digg.com/~r/digg/container/science/popular/~3/Nex5m15mqXI/World_s_highest_drug_levels_entering_India_stream",
+                 text},
+  PubDate: {xmlText,[{pubDate,8},{item,12},{channel,2},{rss,1}],
+                    1,[],"Mon, 26 Jan 2009 23:50:01 +0000",text}.
+Item #5:
+  Guid: {xmlText,[{guid,20},{item,10},{channel,2},{rss,1}],
+                 1,[],
+                 "http://digg.com/environment/Renewable_Energy_Accounts_For_Largest_Increase_On_U_S_Grid",
+                 text},
+  Title: {xmlText,[{title,2},{item,10},{channel,2},{rss,1}],
+                  1,[],
+                  "Renewable Energy Accounts For Largest Increase On U.S. Grid.",
+                  text},
+  Link: {xmlText,[{link,4},{item,10},{channel,2},{rss,1}],
+                 1,[],
+                 "http://feeds.digg.com/~r/digg/container/science/popular/~3/Nryq6mJ65c0/Renewable_Energy_Accounts_For_Largest_Increase_On_U_S_Grid",
+                 text},
+  PubDate: {xmlText,[{pubDate,8},{item,10},{channel,2},{rss,1}],
+                    1,[],"Tue, 27 Jan 2009 01:10:02 +0000",text}.
+Item #6:
+  Guid: {xmlText,[{guid,16},{item,16},{channel,2},{rss,1}],
+                 1,[],
+                 "http://digg.com/general_sciences/1_800_Year_Old_Figurine_Found_in_Jerusalem",
+                 text},
+  Title: {xmlText,[{title,2},{item,16},{channel,2},{rss,1}],
+                  1,[],"1,800-Year-Old Figurine Found in Jerusalem",text},
+  Link: {xmlText,[{link,4},{item,16},{channel,2},{rss,1}],
+                 1,[],
+                 "http://feeds.digg.com/~r/digg/container/science/popular/~3/TtfYH-Eycmc/1_800_Year_Old_Figurine_Found_in_Jerusalem",
+                 text},
+  PubDate: {xmlText,[{pubDate,8},{item,16},{channel,2},{rss,1}],
+                    1,[],"Mon, 28 Jan 2009 21:00:01 +0000",text}.
+true
+
+3. Обработка ленты RSS с добавленной копией элемента
+
+11> rss_queue:test1("digg-science-rss-same.xml").
+Size of RSS2Feed: 6
+=INFO REPORT==== 17-Mar-2021::02:37:23.340000 ===
+rss_queue <0.104.0>:  New item added to Queue. PID: <0.104.0>
+
+=INFO REPORT==== 17-Mar-2021::02:37:23.340000 ===
+rss_queue <0.104.0>:  New item added to Queue. PID: <0.104.0>
+
+=INFO REPORT==== 17-Mar-2021::02:37:23.340000 ===
+rss_queue <0.104.0>:  New item added to Queue. PID: <0.104.0>
+
+=INFO REPORT==== 17-Mar-2021::02:37:23.340000 ===
+rss_queue <0.104.0>:  New item added to Queue. PID: <0.104.0>
+
+=INFO REPORT==== 17-Mar-2021::02:37:23.340000 ===
+rss_queue <0.104.0>:  New item added to Queue. PID: <0.104.0>
+
+=INFO REPORT==== 17-Mar-2021::02:37:23.340000 ===
+rss_queue <0.104.0>:  New item added to Queue. PID: <0.104.0>
+
+Queue size = 6 items from the feed to <0.104.0>
+
+Queue:
+=INFO REPORT==== 17-Mar-2021::02:37:23.340000 ===
+rss_queue <0.104.0>:  Sent rss items to <0.78.0>
+
+Item #1:
+  Guid: {xmlText,[{guid,16},{item,20},{channel,2},{rss,1}],
+                 1,[],
+                 "http://digg.com/space/Dark_flow_Proof_of_another_universe",
+                 text},
+  Title: {xmlText,[{title,2},{item,20},{channel,2},{rss,1}],
+                  1,[],"Dark flow: Proof of another universe? ",text},
+  Link: {xmlText,[{link,4},{item,20},{channel,2},{rss,1}],
+                 1,[],
+                 "http://feeds.digg.com/~r/digg/container/science/popular/~3/_7wZtEyDn3w/Dark_flow_Proof_of_another_universe",
+                 text},
+  PubDate: {xmlText,[{pubDate,8},{item,20},{channel,2},{rss,1}],
+                    1,[],"Sat, 24 Jan 2009 04:30:03 +0000",text}.
+Item #2:
+  Guid: {xmlText,[{guid,16},{item,18},{channel,2},{rss,1}],
+                 1,[],
+                 "http://digg.com/environment/Row_over_scheme_to_fertilise_oceans",
+                 text},
+  Title: {xmlText,[{title,2},{item,18},{channel,2},{rss,1}],
+                  1,[],"Row over scheme to 'fertilise' oceans  ",text},
+  Link: {xmlText,[{link,4},{item,18},{channel,2},{rss,1}],
+                 1,[],
+                 "http://feeds.digg.com/~r/digg/container/science/popular/~3/khG4CiCE2d8/Row_over_scheme_to_fertilise_oceans",
+                 text},
+  PubDate: {xmlText,[{pubDate,8},{item,18},{channel,2},{rss,1}],
+                    1,[],"Mon, 26 Jan 2009 08:30:02 +0000",text}.
+Item #3:
+  Guid: {xmlText,[{guid,16},{item,16},{channel,2},{rss,1}],
+                 1,[],
+                 "http://digg.com/general_sciences/1_800_Year_Old_Figurine_Found_in_Jerusalem",
+                 text},
+  Title: {xmlText,[{title,2},{item,16},{channel,2},{rss,1}],
+                  1,[],"1,800-Year-Old Figurine Found in Jerusalem",text},
+  Link: {xmlText,[{link,4},{item,16},{channel,2},{rss,1}],
+                 1,[],
+                 "http://feeds.digg.com/~r/digg/container/science/popular/~3/TtfYH-Eycmc/1_800_Year_Old_Figurine_Found_in_Jerusalem",
+                 text},
+  PubDate: {xmlText,[{pubDate,8},{item,16},{channel,2},{rss,1}],
+                    1,[],"Mon, 26 Jan 2009 21:00:01 +0000",text}.
+Item #4:
+  Guid: {xmlText,[{guid,16},{item,12},{channel,2},{rss,1}],
+                 1,[],
+                 "http://digg.com/environment/World_s_highest_drug_levels_entering_India_stream",
+                 text},
+  Title: {xmlText,[{title,2},{item,12},{channel,2},{rss,1}],
+                  1,[],"World's highest drug levels entering India stream",
+                  text},
+  Link: {xmlText,[{link,4},{item,12},{channel,2},{rss,1}],
+                 1,[],
+                 "http://feeds.digg.com/~r/digg/container/science/popular/~3/Nex5m15mqXI/World_s_highest_drug_levels_entering_India_stream",
+                 text},
+  PubDate: {xmlText,[{pubDate,8},{item,12},{channel,2},{rss,1}],
+                    1,[],"Mon, 26 Jan 2009 23:50:01 +0000",text}.
+Item #5:
+  Guid: {xmlText,[{guid,16},{item,14},{channel,2},{rss,1}],
+                 1,[],
+                 "http://digg.com/environment/World_s_highest_drug_levels_entering_India_stream",
+                 text},
+  Title: {xmlText,[{title,2},{item,14},{channel,2},{rss,1}],
+                  1,[],"World's highest drug levels entering India stream",
+                  text},
+  Link: {xmlText,[{link,4},{item,14},{channel,2},{rss,1}],
+                 1,[],
+                 "http://feeds.digg.com/~r/digg/container/science/popular/~3/Nex5m15mqXI/World_s_highest_drug_levels_entering_India_stream",
+                 text},
+  PubDate: {xmlText,[{pubDate,8},{item,14},{channel,2},{rss,1}],
+                    1,[],"Mon, 26 Jan 2009 23:50:01 +0000",text}.
+Item #6:
+  Guid: {xmlText,[{guid,20},{item,10},{channel,2},{rss,1}],
+                 1,[],
+                 "http://digg.com/environment/Renewable_Energy_Accounts_For_Largest_Increase_On_U_S_Grid",
+                 text},
+  Title: {xmlText,[{title,2},{item,10},{channel,2},{rss,1}],
+                  1,[],
+                  "Renewable Energy Accounts For Largest Increase On U.S. Grid.",
+                  text},
+  Link: {xmlText,[{link,4},{item,10},{channel,2},{rss,1}],
+                 1,[],
+                 "http://feeds.digg.com/~r/digg/container/science/popular/~3/Nryq6mJ65c0/Renewable_Energy_Accounts_For_Largest_Increase_On_U_S_Grid",
+                 text},
+  PubDate: {xmlText,[{pubDate,8},{item,10},{channel,2},{rss,1}],
+                    1,[],"Tue, 27 Jan 2009 01:10:02 +0000",text}.
+true
+
+
+4. Проверка на добавление двух лент с похожим содержимым в одну очередь 
+Результат -> True
