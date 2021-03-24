@@ -11,3 +11,7 @@ Lab 2 - Sieve of Eratosthenes, Process-Style
 Lab 3 - Parsing RSS Feeds
 
 Lab 4 - RSS Queues 
+
+Lab 5 - Reading Internet Feeds
+
+Lab 6 - RSS Queues and gen_server 
