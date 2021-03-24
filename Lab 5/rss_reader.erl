@@ -34,7 +34,7 @@ server(Url, QPid) ->
 					end;
 				false ->
 					?ERROR("Version not 2.0! PID: ~p~n", [QPid]),
-					error
+					erlang:exit(not_rss2_feed)
 			end;
-		_Else -> error
+		_Else -> erlang:exit(Code)
 	end.
